@@ -1,0 +1,17 @@
+*{ margin: 0px;}
+#bg { width: 702px; height: 715px; background-image: url(/3ds/3ds_bg.png); }
+#top { position: relative; top: 77px; width: 400px; height: 240px; margin: 0 auto; }
+#status { position: absolute; left: 0px; top: 0px; width: 400px; height: 20px; overflow: hidden; background-image: url(/3ds/3ds_status.png); }
+#topscreen { position: absolute; left: 0px; top: 20px; width: 400px; height: 220px; overflow: hidden; background-image: url(/3ds/home_top.png); }
+#bottom { position: relative; top: 168px; width: 320px; height: 240px; margin: 0 40; }
+#bottomscreen { position: absolute; left: 0px; top: 0px; width: 320px; height: 212px; overflow: hidden; background-image: url(/3ds/home_bottom.png); }
+#bottompane { margin-top: 36px; }
+#navi { position: absolute; left: 0px; top: 212px; width: 320px; height: 28px; overflow: hidden;}
+button.image { border: none; padding: 0px; background-size: 100% 100%; }
+button::-moz-focus-inner { padding: 0; border: 0; }
+div#title { border: 9px solid #eaebe6; padding: 0px; background: #eaebe6; border-radius: 9; box-shadow: 3px 3px 9px #888888; }
+button.image:hover { box-shadow: 0 0 8px 2px #3ccd78 inset; }
+button.image:focus { box-shadow: 0 0 8px 2px #3ccd78 inset; }
+/*
+button.image:focus { border: 4px solid #3ccd78; margin: -4px; border-radius: 4;}
+*/
