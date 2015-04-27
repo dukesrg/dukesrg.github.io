@@ -1,7 +1,133 @@
-<html>
-<head>
-</head>
-<body>
-stub
-</body>
-</html>
+<HTML><HEAD>
+ <TITLE>3DS Online Tools</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<META name="viewport" content="width=400"> 
+<SCRIPT src="go2_files/autostyle.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT language="javascript">
+var is3DS = navigator.platform.indexOf("Nintendo 3DS") >= 0;
+var x=new XMLHttpRequest();
+x.open('GET','rop.json',false);
+x.send();
+var launchers = JSON.parse(x.responseText);
+var selected = null
+var toggled = null;
+function setscroll(size){
+	x = document.activeElement.offsetLeft - bottompane.scrollLeft;
+	var e = event.keyCode;
+	var dx = 0;
+	if ( e == 39 && x >= 320-size ){
+		bottompane.scrollLeft += size;
+	}
+	if ( e == 37 && x <= size ){
+		bottompane.scrollLeft -= size;
+	}
+	if ( e == 13 ){
+	        toggled = document.activeElement;
+	}
+}
+function readparams(obj){
+	if(obj)
+		with (launchers[obj.id])
+			if (hasOwnProperty('params'))
+				for (param in params)
+					params[param].value = document.getElementById('param'+param).value;
+}
+function geturl(obj) {
+	if(is3DS){
+		a = navigator.userAgent.split('.');
+		v = a.pop().substring(0,1).replace(/[UEJ]/,'');
+		v = '1' + a.pop() + v;
+	}else{
+		v='17567';
+	}
+	readparams(obj);
+	with (launchers[obj.id]){
+		v = rop.replace("%spiderver%", v);
+		if (hasOwnProperty('params'))
+			for (param in params)
+				with (params[param])
+					if (value.length > 0){
+						v += '&';
+						if(obj.id=="arcode"){
+							cc=value.toUpperCase().replace(/[^\dA-F]/g,'');
+							n=((cc.length+15)>>4).toString(16).toUpperCase();
+							ccc=Array(9-n.length).join('0')+n+cc;
+							cc='';
+							if(hasOwnProperty('paramprefix')){
+								cc+=valueprefix;
+							}
+							for(i=0;i<ccc.length;i+=8){
+								cc+=ccc.substring(i+6,i+8)+ccc.substring(i+4,i+6)+ccc.substring(i+2,i+4)+ccc.substring(i+0,i+2);
+							}
+							v += cc;
+						}else{
+							v += value;
+						}
+					}
+	}
+	return '/3ds/rop?' + v;
+}
+function toggle(obj) {
+	if (toggled == obj) {
+		if (is3DS) {
+			window.location.replace(geturl(obj));
+		} else {
+			window.location.assign('https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + window.location.protocol + '//' + window.location.hostname + geturl(obj).replace('&', '%26'));
+		}
+	} else {
+		toggled = obj;
+	}
+}
+function titleset(obj) {
+	readparams(selected);
+	paramspane.innerHTML='';
+	selected = obj;
+	with (launchers[selected.id])
+		if (hasOwnProperty('params'))
+			for (param in params)
+				with (params[param])
+					paramspane.innerHTML += "<div><label style='width: 160px;'>"+title+"</label>&nbsp;<input id=param"+param+" type=text " + (hasOwnProperty('value')?"value='"+value+"'":"") + " style='width: 140px;' " + (hasOwnProperty('custom')?"":"disabled") + "/></div>";
+	with (document.getElementById("title")) {
+		innerHTML = obj.title.split(/\n/).join("<br>");
+		style.display = '';
+	}
+}
+function titleunset(obj) {
+	document.getElementById("title").style.display = 'none';
+}
+</SCRIPT>
+</HEAD>
+<BODY onkeydown="setscroll(48+8+8);">
+<CENTER> 
+<DIV id="bg">
+<DIV id="top">
+<DIV id="status"></DIV>
+<DIV id="topscreen">3DS Gateway launcher
+<DIV id="result"></DIV>
+<DIV align="center" id="title" style="left: 50%; width: 60%; bottom: 16px; margin-left: -33%; display: none; position: absolute;"></DIV></DIV></DIV>
+<DIV id="bottom">
+<DIV id="bottomscreen">
+<DIV id="bottompane" style="height: 104px; text-align: left; padding-bottom: 16px; -ms-overflow-y: hidden;">
+<DIV id="icons" style="align: left;">
+<SCRIPT>
+		iconsize = 48;
+		marginh = 8;
+		marginv = 32;
+		icons.style.width=Object.keys(launchers).length*(iconsize + marginh * 2);
+		for (id in launchers){
+			with (launchers[id]){
+				document.write("<button id=" + id + " title='" + title + "' class=image onclick=toggle(this); onfocus=titleset(this); onblur=titleunset(this); onmouseover=titleset(this); onmouseout=titleunset(this); style='width: "+iconsize+"; height: "+iconsize+"; margin: "+marginv+" "+marginh+"; padding: 5; border: 10; background-image: url(" + icon + "); background-size: cover;' />");
+			}
+		}
+	</SCRIPT>
+	 </DIV></DIV>
+<DIV style="height: 46px; text-align: left; -ms-overflow-x: hidden; -ms-overflow-y: scroll;">
+<DIV id="paramspane" style="text-align: right;"></DIV></DIV></DIV>
+<DIV id="navi"><IMG width="320" height="28" src="go2_files/3ds_navi.png" border="none" 
+usemap="#navigation"> <MAP name="navigation"><AREA onclick="history.back();" 
+  shape="rect" coords="0,1,42,28"> <AREA onclick="history.forward();" shape="rect" 
+  coords="43,1,85,28"> <AREA onclick="location.reload();" shape="rect" coords="86,1,127,28"> 
+  <AREA shape="rect" coords="128,1,170,28"> <AREA shape="rect" coords="171,1,213,28"> 
+  <AREA shape="rect" coords="214,1,320,28"> </MAP> 
+</DIV></DIV></DIV></CENTER></BODY></HTML>
