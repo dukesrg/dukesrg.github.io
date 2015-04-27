@@ -1,0 +1,16 @@
+*{ margin: 0px;}
+#top { position: relative; width: 400px; height: 220px; margin: 0 auto;}
+#topscreen { position: absolute; left: 0px; top: 0px; width: 400px; height: 220px; overflow: hidden; background-image: url(/3ds/home_top.png); }
+#status { display: none; }
+#bottom { position: relative; width: 320px; height: 212px; margin: 0 40; }
+#bottomscreen { position: absolute; left: 0px; top: 0px; width: 320px; height: 212px; overflow: hidden; background-image: url(/3ds/home_bottom.png); }
+#bottompane { margin-top: 36px; }
+#navi { display: none; }
+button.image { border: none; padding: 0px; background-size: 100% 100%; }
+button::-moz-focus-inner { padding: 0; border: 0; }
+div#title { border: 9px solid #eaebe6; padding: 0px; background: #eaebe6; border-radius: 9; box-shadow: 3px 3px 9px #888888; }
+button.image:focus { box-shadow: 0 0 8px 2px #3ccd78 inset; }
+/*
+button.image:hover { border: 4px solid #3ccd78; margin: -4px; border-radius: 4;}
+button.image:focus { border: 4px solid #3ccd78; margin: -4px; border-radius: 4;}
+*/
