@@ -1,0 +1,105 @@
+{
+"gateway":{
+	"title":"Gateway launcher\nGateway"
+	,"icon":"http://www.gateway-3ds.com/wp-content/uploads/2015/01/banner_side1.png"
+	,"rop":"GW%spiderver%.dat"
+	,"params":[
+	{
+		"title":"Launcher filename"
+		,"value":"Launcher.dat"
+	}
+	]
+}
+,"regionthree":{
+	"title":"RegionThree\nsmea"
+	,"icon":"https://avatars0.githubusercontent.com/u/6338016?48"
+	,"rop":"GW%spiderver%.dat"
+	,"params":[
+	{
+		"title":"Launcher filename"
+		,"value":"RegionThree.dat"
+	}
+	]
+}
+,"rxtools":{
+	"title":"rxTools\nroxas75"
+	,"icon":"https://avatars2.githubusercontent.com/u/9784737?s=48"
+	,"rop":"GW%spiderver%.dat"
+	,"params":[
+	{
+		"title":"Launcher filename"
+		,"value":"rxTools.dat"
+	}
+	]
+}
+,"custom":{
+	"title":"Custom launcher"
+	,"icon":"http://www.nintendo.co.jp/3ds/hardware/common/img/icon_ar.png"
+	,"rop":"GW%spiderver%.dat"
+	,"params":[
+	{
+		"title":"Launcher filename"
+		,"value":"Launcher.dat"
+		,"custom":1
+	}
+	]
+}
+,"regionthree2":{
+	"title":"RegionThree\n9.x browser only version\nsmea & Yifan Lu"
+	,"icon":"https://avatars0.githubusercontent.com/u/6338016?48"
+	,"rop":"RegionThree.dat"
+}
+,"spoof":{
+	"title":"Firmware version spoof\nto access eShop and more\nmotezazer"
+	,"icon":"http://www.nintendo.co.jp/3ds/css/img/support_nnid.png"
+	,"rop":"spoof.dat"
+}
+,"vc":{
+	"title":"Game Boy & Game Boy Color\nVirtual Console Injector\nKazoWAR"
+	,"icon":"https://d3esbfg30x759i.cloudfront.net/tip/AAQAAAAL5gAzm1Dxc_"
+	,"rop":"VC.dat"
+	,"params":[
+	{
+		"title":"ROM filename"
+		,"value":"rom.gbc"
+		,"custom":1
+	}
+	]
+}
+,"arcode":{
+	"title":"Action Replay cheat engine\nKazoWAR"
+	,"icon":"http://i1-news.softpedia-static.com/images/news2/Action-Replay-DS-Arrives-2.jpg"
+	,"rop":"arcode.dat"
+	,"params":[
+	{
+		"title":"Cheat code"
+		,"valueprefix":"E00="
+		,"custom":1
+	}
+	]
+}
+,"acnldump":{
+	"title":"Animal Crossing: New Leaf\nRAM dump\nmarc_max"
+	,"icon":"https://d3esbfg30x759i.cloudfront.net/tip/AAQAAAAIZAAkFoFvin"
+	,"rop":"acnldump.dat"
+	,"params":[
+	{
+		"title":"Dump filename"
+		,"value":"acnlram.bin"
+		,"custom":1
+	}
+	]
+}
+,"acnldinjc":{
+	"title":"Animal Crossing: New Leaf\nRAM inject\nmarc_max"
+	,"icon":"https://d3esbfg30x759i.cloudfront.net/tip/AAQAAAAIZAAkFoFvin"
+	,"rop":"acnlinjc.dat"
+	,"params":[
+	{
+		"title":"Dump filename"
+		,"value":"acnlram.bin"
+		,"custom":1
+	}
+	]
+}
+}
