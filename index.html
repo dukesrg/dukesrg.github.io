@@ -58,7 +58,7 @@ function geturl(obj) {
 						}
 						if(hasOwnProperty('little-endian')){
 							a=c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}?/g);
-							c=''
+							c='';
 							while(a.length>0){
 								for(b=a.shift().match(/..?/g);b.length>0;cc+=b.pop());
 							}
