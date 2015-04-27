@@ -47,9 +47,9 @@ function geturl(obj) {
 				with (params[param])
 					if (value.length > 0){
 						v += '&';
-						if(hasOwnProperty('valueprefix')){
-							v+=valueprefix;
-						}
+//						if(hasOwnProperty('valueprefix')){
+//							v += valueprefix;
+//						}
 						if(obj.id=="arcode"){
 							cc=value.toUpperCase().replace(/[^\dA-F]/g,'');
 							n=((cc.length+15)>>4).toString(16).toUpperCase();
