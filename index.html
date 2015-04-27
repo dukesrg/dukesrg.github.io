@@ -71,7 +71,7 @@ function toggle(obj) {
 		if (is3DS) {
 			window.location.replace(geturl(obj));
 		} else {
-			window.location.assign('https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + window.location.protocol + '//' + window.location.hostname + encodeURI(geturl(obj)));
+			window.location.assign('https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + window.location.protocol + '//' + window.location.hostname + encodeURIComponent(geturl(obj)));
 		}
 	} else {
 		toggled = obj;
