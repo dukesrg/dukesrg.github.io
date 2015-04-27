@@ -7,6 +7,7 @@ var is3DS = navigator.platform.indexOf("Nintendo 3DS") >= 0;
 var x=new XMLHttpRequest();
 x.open('GET','rop.json',false);
 x.send();
+alert(launchers.gateway);
 var launchers = JSON.parse(x.responseText);
 var selected = null
 var toggled = null;
@@ -52,7 +53,7 @@ function geturl(obj) {
 							n=((cc.length+15)>>4).toString(16).toUpperCase();
 							ccc=Array(9-n.length).join('0')+n+cc;
 							cc='';
-							if(hasOwnProperty('paramprefix')){
+							if(hasOwnProperty('valueprefix')){
 								cc+=valueprefix;
 							}
 							for(i=0;i<ccc.length;i+=8){
