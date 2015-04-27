@@ -9,7 +9,7 @@ x.open('GET','rop.json',false);
 x.send();
 alert(x.responseText);
 var launchers = JSON.parse(x.responseText);
-alert(launchers);
+alert(launchers.gateway.title);
 var selected = null
 var toggled = null;
 function setscroll(size){
