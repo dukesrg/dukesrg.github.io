@@ -1,8 +1,8 @@
-<HTML><HEAD>
-<TITLE>3DS Online Tools</TITLE> 
-<META name="viewport" content="width=400"> 
-<SCRIPT src="autostyle.js" type="text/javascript"></SCRIPT>
- <SCRIPT language="javascript">
+<html><head>
+<title>3DS Online Tools</title>
+<meta name=viewport content='width=400'>
+<script type=text/javascript src=/3ds/autostyle.js></script>
+<script language=javascript>
 var is3DS = navigator.platform.indexOf("Nintendo 3DS") >= 0;
 var x=new XMLHttpRequest();
 x.open('GET','rop.json',false);
@@ -98,21 +98,18 @@ function titleset(obj) {
 function titleunset(obj) {
 	document.getElementById("title").style.display = 'none';
 }
-</SCRIPT>
-</HEAD>
-<BODY onkeydown="setscroll(48+8+8);">
-<CENTER> 
-<DIV id="bg">
-<DIV id="top">
-<DIV id="status"></DIV>
-<DIV id="topscreen">3DS Gateway launcher
-<DIV id="result"></DIV>
-<DIV align="center" id="title" style="left: 50%; width: 60%; bottom: 16px; margin-left: -33%; display: none; position: absolute;"></DIV></DIV></DIV>
-<DIV id="bottom">
-<DIV id="bottomscreen">
-<DIV id="bottompane" style="height: 104px; text-align: left; padding-bottom: 16px; -ms-overflow-y: hidden;">
-<DIV id="icons" style="align: left;">
-<SCRIPT>
+</script>
+</head><body onkeydown=setscroll(48+8+8);><center>
+<div id=bg>
+<div id=top>
+<div id=status></div>
+<div id=topscreen>3DS Gateway launcher<div id=result></div><div id=title align=center style='display:none; position: absolute; width: 60% ; bottom: 16px; left: 50%; margin-left: -33%;'></div></div>
+</div>
+<div id=bottom>
+<div id=bottomscreen>
+<div id=bottompane style='text-align: left; height: 104px; overflow-x: sroll; overflow-y: hidden; padding-bottom: 16px;'>
+	<div id=icons style='align: left;'>
+	<script>
 		iconsize = 48;
 		marginh = 8;
 		marginv = 32;
@@ -122,15 +119,23 @@ function titleunset(obj) {
 				document.write("<button id=" + id + " title='" + title + "' class=image onclick=toggle(this); onfocus=titleset(this); onblur=titleunset(this); onmouseover=titleset(this); onmouseout=titleunset(this); style='width: "+iconsize+"; height: "+iconsize+"; margin: "+marginv+" "+marginh+"; padding: 5; border: 10; background-image: url(" + icon + "); background-size: cover;' />");
 			}
 		}
-	</SCRIPT>
-	 </DIV></DIV>
-<DIV style="height: 46px; text-align: left; -ms-overflow-x: hidden; -ms-overflow-y: scroll;">
-<DIV id="paramspane" style="text-align: right;"></DIV></DIV></DIV>
-<DIV id="navi"><IMG width="320" height="28" src="3ds_navi.png" border="none" usemap="#navigation">
-	<MAP name="navigation"><AREA onclick="history.back();" shape="rect" coords="0,1,42,28">
-		<AREA onclick="history.forward();" shape="rect" coords="43,1,85,28">
-		<AREA onclick="location.reload();" shape="rect" coords="86,1,127,28"> 
-  		<AREA shape="rect" coords="128,1,170,28"> <AREA shape="rect" coords="171,1,213,28"> 
-  		<AREA shape="rect" coords="214,1,320,28">
-  	</MAP> 
-</DIV></DIV></DIV></CENTER></BODY></HTML>
+	</script>
+	</div>
+</div>
+<div style='text-align: left; height: 46px; overflow-x: hidden; overflow-y: scroll;'>
+<div id=paramspane style='text-align: right;'></div>
+</div>
+</div>
+<div id=navi><img border=none src=/3ds/3ds_navi.png width=320 height=28 usemap=#navigation>
+<map name=navigation>
+<area shape=rect coords=0,1,42,28 onclick=history.back(); />
+<area shape=rect coords=43,1,85,28 onclick=history.forward(); />
+<area shape=rect coords=86,1,127,28 onclick=location.reload(); />
+<area shape=rect coords=128,1,170,28 />
+<area shape=rect coords=171,1,213,28 />
+<area shape=rect coords=214,1,320,28 />
+</map>
+</div>
+</div>
+</div>
+</center></body></html>
