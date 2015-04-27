@@ -7,6 +7,7 @@
 	{
 		"title":"Launcher filename"
 		,"value":"Launcher.dat"
+		,"fixed":1		
 	}
 	]
 }
@@ -18,6 +19,7 @@
 	{
 		"title":"Launcher filename"
 		,"value":"RegionThree.dat"
+		,"fixed":1		
 	}
 	]
 }
@@ -29,6 +31,7 @@
 	{
 		"title":"Launcher filename"
 		,"value":"rxTools.dat"
+		,"fixed":1		
 	}
 	]
 }
@@ -47,7 +50,7 @@
 ,"regionthree2":{
 	"title":"RegionThree\n9.x browser only version\nsmea & Yifan Lu"
 	,"icon":"https://avatars0.githubusercontent.com/u/6338016?48"
-	,"rop":"RegionThree.dat"
+	,"rop":"RegionThree%spiderver%.dat"
 }
 ,"spoof":{
 	"title":"Firmware version spoof\nto access eShop and more\nmotezazer"
@@ -98,6 +101,54 @@
 	{
 		"title":"Dump filename"
 		,"value":"acnlram.bin"
+		,"custom":1
+	}
+	]
+}
+,"loadcode":{
+	"title":"Load code\nYifan Lu"
+	,"icon":""
+	,"rop":"LoadCode%spiderver%.dat"
+	,"params":[
+	{
+		"title":"ARM11 code filename"
+		,"value":"code.bin"
+		,"custom":1
+	}
+	]
+},
+,"loadrop":{
+	"title":"Load ROP\nYifan Lu"
+	,"icon":""
+	,"rop":"LoadROP%spiderver%.dat"
+	,"params":[
+	{
+		"title":"ROP code filename"
+		,"value":"ROP.dat"
+		,"custom":1
+	}
+	]
+}
+,"memorydump":{
+	"title":"Memory dump\nWinterMute & Yifan Lu"
+	,"icon":""
+	,"rop":"MemoryDump%spiderver%.dat"
+	,"params":[
+	{
+		"title":"Dump filename"
+		,"value":"memory.bin"
+		,"custom":1
+	}
+	,{
+		"title":"Start address"
+		,"valueprefix":"58="
+		,"value":"00100000"
+		,"custom":1
+	}
+	,{
+		"title":"Size"
+		,"valueprefix":"5C="
+		,"value":"00300000"
 		,"custom":1
 	}
 	]
