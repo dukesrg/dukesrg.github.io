@@ -140,15 +140,17 @@
 		,"custom":1
 	}
 	,{
-		"title":"Start address"
+		"title":"Start address (LE)"
 		,"valueprefix":"58="
 		,"value":"00100000"
+		,"little-endian":1
 		,"custom":1
 	}
 	,{
-		"title":"Size"
+		"title":"Size (LE)"
 		,"valueprefix":"5C="
 		,"value":"00300000"
+		,"little-endian":1
 		,"custom":1
 	}
 	]
