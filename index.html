@@ -89,7 +89,7 @@ function titleset(obj) {
 		if (hasOwnProperty('params'))
 			for (param in params)
 				with (params[param])
-					paramspane.innerHTML += "<div><label style='width: 160px;'>"+title+"</label>&nbsp;<input id=param"+param+" type=text " + (hasOwnProperty('value')?"value='"+value+"'":"") + " style='width: 140px;' " + (hasOwnProperty('custom')?"":"disabled") + "/></div>";
+					paramspane.innerHTML += "<div><label style='width: 160px;'>"+title+"</label>&nbsp;<input id=param"+param+" type=text " + (hasOwnProperty('value')?"value='"+value+"'":"") + " style='width: 140px;' " + (hasOwnProperty('fixed')?"disabled":"") + "/></div>";
 	with (document.getElementById("title")) {
 		innerHTML = obj.title.split(/\n/).join("<br>");
 		style.display = '';
