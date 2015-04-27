@@ -50,7 +50,14 @@ function geturl(obj) {
 						if(hasOwnProperty('valueprefix')){
 							v += valueprefix;
 						}
-						if(obj.id=="arcode"){
+						if(hasOwnProperty('little-endian')){
+							a=value.toUpperCase().replace(/[^\dA-F]/g,'').match(/..?/g);
+							cc='';
+							while(a.length>0){
+								cc+=a.pop();
+							}
+							v += cc;
+						}else if(obj.id=="arcode"){
 							cc=value.toUpperCase().replace(/[^\dA-F]/g,'');
 							n=((cc.length+15)>>4).toString(16).toUpperCase();
 							ccc=Array(9-n.length).join('0')+n+cc;
