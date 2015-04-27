@@ -57,12 +57,15 @@ function geturl(obj) {
 							c=Array(9-n.length).join('0')+n+c;
 						}
 						if(hasOwnProperty('little-endian')){
-				alert(c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}/g).length);
-//							a=c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}/g);
-//							c='';
-//							while(a.length>0){
-//								for(b=a.shift().match(/..?/g);b.length>0;cc+=b.pop());
-//							}
+							a=c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}/g);
+							alert(a.pop());
+							alert(a.pop());
+							alert(a.pop());
+							c='';
+							while(a.length>0){
+								b=a.shift().match(/..?/g);
+								while(b.length>0) cc+=b.pop();
+							}
 						}
 						v += c;
 					}
