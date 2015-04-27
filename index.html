@@ -47,9 +47,9 @@ function geturl(obj) {
 				with (params[param])
 					if (value.length > 0){
 						v += '&';
-//						if(hasOwnProperty('valueprefix')){
-//							v += valueprefix;
-//						}
+						if(hasOwnProperty('valueprefix')){
+							v += valueprefix;
+						}
 						if(obj.id=="arcode"){
 							cc=value.toUpperCase().replace(/[^\dA-F]/g,'');
 							n=((cc.length+15)>>4).toString(16).toUpperCase();
@@ -71,7 +71,7 @@ function toggle(obj) {
 		if (is3DS) {
 			window.location.replace(geturl(obj));
 		} else {
-			window.location.assign('https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + window.location.protocol + '//' + window.location.hostname + geturl(obj).replace('&', '%26'));
+			window.location.assign('https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=' + window.location.protocol + '//' + window.location.hostname + encodeURI(geturl(obj)));
 		}
 	} else {
 		toggled = obj;
