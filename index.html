@@ -57,9 +57,7 @@ function geturl(obj) {
 							c=Array(9-n.length).join('0')+n+c;
 						}
 						if(hasOwnProperty('little-endian')){
-				alert(c.toUpperCase());
-				alert(c.toUpperCase().replace(/[^\dA-F]/g,''));
-//				alert(c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}/g).length);
+				alert(c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}/g).length);
 //							a=c.toUpperCase().replace(/[^\dA-F]/g,'').match(/.{8}/g);
 //							c='';
 //							while(a.length>0){
