@@ -7,7 +7,6 @@ var is3DS = navigator.platform.indexOf("Nintendo 3DS") >= 0;
 var x=new XMLHttpRequest();
 x.open('GET','rop.json',false);
 x.send();
-alert(x.responseText);
 var launchers = JSON.parse(x.responseText);
 alert(launchers.gateway.title);
 var selected = null
