@@ -107,7 +107,7 @@
 }
 ,"loadcode":{
 	"title":"Load code\nYifan Lu"
-	,"icon":""
+	,"icon":"http://www.nintendo.co.jp/3ds/hardware/common/img/icon_ar.png"
 	,"rop":"LoadCode%spiderver%.dat"
 	,"params":[
 	{
@@ -119,7 +119,7 @@
 }
 ,"loadrop":{
 	"title":"Load ROP\nYifan Lu"
-	,"icon":""
+	,"icon":"http://www.nintendo.co.jp/3ds/hardware/common/img/icon_ar.png"
 	,"rop":"LoadROP%spiderver%.dat"
 	,"params":[
 	{
@@ -131,7 +131,7 @@
 }
 ,"memorydump":{
 	"title":"Memory dump\nWinterMute & Yifan Lu"
-	,"icon":""
+	,"icon":"http://www.nintendo.co.jp/3ds/hardware/common/img/icon_ar.png"
 	,"rop":"MemoryDump%spiderver%.dat"
 	,"params":[
 	{
