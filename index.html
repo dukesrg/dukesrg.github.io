@@ -8,7 +8,6 @@ var x=new XMLHttpRequest();
 x.open('GET','rop.json',false);
 x.send();
 var launchers = JSON.parse(x.responseText);
-alert(launchers.gateway.title);
 var selected = null
 var toggled = null;
 function setscroll(size){
