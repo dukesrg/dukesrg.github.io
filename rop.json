@@ -74,7 +74,7 @@
 	,"params":[
 	{
 		"title":"Cheat code"
-		,"valueprefix":"E00:"
+		,"valueprefix":"F0C:"
 		,"little-endian":1
 	}
 	]
