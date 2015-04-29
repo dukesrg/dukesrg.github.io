@@ -65,7 +65,9 @@ function geturl(obj) {
 									c+=b.pop();
 							}
 						}
-						v += c;
+						a=c.match(/..?/g);
+						for(c in a)a[c]=parseInt(a[c],16);
+						v += btoa(String.fromCharCode.apply(null,a));
 					}
 	}
 	return '/3ds/rop?' + v;
