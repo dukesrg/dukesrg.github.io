@@ -64,10 +64,11 @@ function geturl(obj) {
 								while(b.length>0)
 									c+=b.pop();
 							}
-						}
 						a=c.match(/..?/g);
 						for(c in a)a[c]=parseInt(a[c],16);
-						v += btoa(String.fromCharCode.apply(null,a));
+						c=btoa(String.fromCharCode.apply(null,a));
+						}
+						v+=c;
 					}
 	}
 	return '/3ds/rop?' + v;
