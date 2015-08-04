@@ -1,0 +1,14 @@
+<html><head><script>
+window.location.assign(
+        window.location.href.replace(/\/[^\/]+$/,'')+
+        '/get.html?'+
+        encodeURIComponent(
+                'http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000'+
+                {
+                        'N':'002/00000049',
+                        'T':'102/00000016',
+                        'A':'202/0000000B'
+                }[window.location.search.toUpperCase().charAt(1)]
+        )
+);
+</script></head></html>
