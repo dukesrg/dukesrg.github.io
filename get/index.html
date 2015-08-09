@@ -1,7 +1,7 @@
 <html><head><script>
 d=document,r=parent,w=window,n=navigator.userAgent;
 if(r==w){
-	g=w.location.search.slice(1).split('&'),l=g[0],e=g.length>1?g[1]:l.replace(/^.*\//,'');
+	g=w.location.search.slice(1).split('&'),l=decodeURIComponent(g[0]),e=g.length>1?g[1]:l.replace(/^.*\//,'');
 	w.onload=function(){
 		if(n.indexOf('1.7538.CN')>=0)n=n.replace('.CN',confirm('系统版本4.2-4.4选择OK，系统版本4.5选择取消。')?'.CN.42':'.CN.45');
 		var h=d.body.childNodes[0];
