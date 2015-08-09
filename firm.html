@@ -1,9 +1,10 @@
 <html><head><script>
+s=window.location.search.slice(1).split('&');
 window.location.assign(
 	window.location.href.replace(/\/[^\/]+$/,'')+'/get?'+'http://nus.cdn.c.shop.nintendowifi.net/ccs/download/0004013800000'+{
 		'N':'002/00000049',
 		'T':'102/00000016',
 		'A':'202/0000000B'
-	}[window.location.search.toUpperCase().charAt(1)]
+	}[s[0].charAt(1).toUpperCase()]+s.length>1?('&'+s[1]):'';
 );
 </script></head></html>

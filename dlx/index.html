@@ -14,7 +14,7 @@ if(r==w){
 			if(x.status==200){
 				var u='OK';
 				var s=x.responseText;
-				ver y=s.indexOf('http://');
+				var y=s.indexOf('http://');
 				if(y>0&&l.length>0)s=s.substring(0,y)+l+'\0'+s.slice(y+l.length+1);
 				y=s.length;
 				var t=Array(y<768?768:y);
