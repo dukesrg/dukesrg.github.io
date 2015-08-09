@@ -1,4 +1,5 @@
 <html><head><script>
+s=window.location.search.slice(1).split('&');
 window.location.assign(
 	window.location.href.replace(/\/[^\/]+$/,'')+'/get?'+'http://nus.cdn.c.shop.nintendowifi.net/ccs/download/000400100002'+{
 		'P':'0000/00000022',
@@ -7,6 +8,6 @@ window.location.assign(
 		'N':'6000/00000006',
 		'R':'7000/0000000D',
 		'W':'8000/00000005'
-	}[navigator.userAgent.slice(-1)]
+	}[navigator.userAgent.slice(-1)]+(s[0].length>1?'&'+s[0]:'')
 );
 </script></head></html>
